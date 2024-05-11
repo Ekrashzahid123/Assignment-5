@@ -90,45 +90,150 @@ function Positivenumbercount() {
 }
 
 Positivenumbercount();
-//11 questions
-//Write a function that takes an array of words and returns
-// a new array containing only the words that start with the letter 'a'.
-
-function Arrayofwords(Arr_name: string[]) {}
-
-/*Write a JavaScript function that accepts an array and reverses its elements without 
-using the .reverse() method. Log the result.*/
-
-// question no 21
-/*Write a function calculateProduct that takes an array of numbers
- and returns the product of all elements.
-*/
-let arr_prod = [1, 2, 3, 4];
-function arrayProd(arr_prod: number[]) {
-  let prod;
-  for (let i = 1; i < arr_prod.length; i++) {
-    prod = arr_prod[i] * arr_prod[i];
-  }
-  console.log("The Product of Array is as:", prod);
-}
-
-arrayProd(arr_prod);
-//question 23
-/*Create a function findDuplicates that finds and logs all duplicates in an array.*/
-let arr_duplicate = [1, 2, 3, 4, 5, 6];
-
-function findDuplicates(arr_duplicate: number[]) {
-  let count = 0;
-  for (let k = 0; k < arr_duplicate.length - 1; k++) {
-    if (arr_duplicate[k] === arr_duplicate[k + 1]) {
-      count++;
+/*Write a function that takes an array of words and
+ returns a new array containing only the words that start with the letter 'a'.*/
+let Arr = ["Apple", "Mango", "Orange", "Ali"];
+function FIndELementStartwithA(Arr: string[]) {
+  console.log("Print the Element that start with A");
+  for (let i = 0; i < Arr.length; i++) {
+    if (Arr[i][0] == "A" || Arr[i][0] == "a") {
+      console.log("The Element with First letter A is as", Arr[i]);
     }
   }
-  if (count > 0) {
-    console.log("There are duplicate elements in the array");
-  } else {
-    console.log("There are no duplicate elements in the array");
+}
+//Create a script that logs the second to last element of an array named fruits.
+FIndELementStartwithA(Arr);
+let fruits1 = ["Apple", "Mango", "Orange", "Banana"];
+fruits1.pop();
+console.log("The second last Element of an array is as,", fruits1[2]);
+//Develop a function that takes an array of numbers and returns a new array with each number squared.
+let simplearr = [1, 2, 4, 5, 6];
+function Square(simplearr: number[]) {
+  for (let i = 0; i < simplearr.length; i++) {
+    simplearr[i] = Math.pow(simplearr[i], 2);
   }
+
+  console.log(simplearr);
+}
+Square(simplearr);
+
+/*Write a JavaScript function that accepts an array and reverses its elements without using the .reverse() method.
+ Log the result.*/
+
+function reversearray(arr: number[]) {
+  console.log("The original array is as",arr);
+  console.log("The reversing of the array is as");
+  for (let i = 0; i < arr.length / 2; i++) {
+    let temp = arr[i];
+    arr[i] = arr[arr.length - 1 - i];
+    arr[arr.length - 1 - i] = temp;
+  }
+  console.log(arr);
+  return arr;
+}
+let arrq=[1,2,3,4,5];
+reversearray(arrq);
+
+let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1];
+let maxScore = scores[0];
+let minScore = scores[0];
+
+for(let i=0;i<scores.length;i++)
+  {
+   if(maxScore<scores[i])
+    {
+      maxScore=scores[i];
+    }
+    else if(minScore>scores[i])
+    {
+      minScore=scores[i];
+    }
+  }
+
+console.log("Maximum score:", maxScore);
+console.log("Minimum score:", minScore);
+function removeFalseyValues(arr: any[]) {
+  return arr.filter((value: string | number | boolean | null | undefined) => {
+    // Filter out falsey values: false, null, 0, "", undefined, NaN
+    return value !== false && value !== null && value !== 0 && value !== "" && value !== undefined ;
+  });
 }
 
-findDuplicates(arr_duplicate);
+// Example usage
+let arrayWithFalseyValues = [false, null, 0, "", undefined, NaN, 1, 2, 3, "hello"];
+let arrayWithoutFalseyValues = removeFalseyValues(arrayWithFalseyValues);
+console.log("Array with falsey values:", arrayWithFalseyValues);
+console.log("Array without falsey values:", arrayWithoutFalseyValues);
+///
+let arr1=[1,2,3];
+let arr2=[5,6,7];
+let d=arr1.concat(arr2);
+console.log("The concatination of the two string is as",d);
+
+//
+function EVENODDSUM()
+{
+let arr4=[1,2,4,5,6];
+
+let even=0;
+let odd=0;
+for(let i=0;i<arr4.length;i++)
+{
+  if(arr4[i]%2==0)
+    {
+      even=arr4[i]+arr4[i];
+    }
+    else
+    {
+      odd=arr4[i]+arr4[i];
+    }
+}
+console.log("The sum of even number are as:",even);
+console.log("The sum of odd number are as:",odd);
+}
+EVENODDSUM();
+//Create a function that checks whether an element exists in an array. If it exists, return the index,
+// otherwise return -1
+function ElementExistinArray()
+{
+let arr5=[1,2,3,4,5];
+for(let i=0;i<arr5.length;i++)
+{
+    if(arr5[i]<-1)
+      {
+        console.log("The array is Empty no element exist in an array");
+       
+      }
+
+    else
+    {
+      console.log("There are element in the array");
+      return -1;
+    }
+}
+}
+ElementExistinArray();
+
+//
+function Smallestnoinanarray()
+{
+ let arr3=[1,2,3,4,5];
+ let small=1;
+ for(let i=0;i<arr3.length;i++)
+  {
+    if(small>arr3[i])
+      {
+     small =arr3[i];
+      }
+    
+  }
+  console.log("The smallest Element in an array is as",small);
+
+}
+
+Smallestnoinanarray();
+
+
+
+
+
