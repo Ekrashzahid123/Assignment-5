@@ -121,7 +121,7 @@ Square(simplearr);
  Log the result.*/
 
 function reversearray(arr: number[]) {
-  console.log("The original array is as",arr);
+  console.log("The original array is as", arr);
   console.log("The reversing of the array is as");
   for (let i = 0; i < arr.length / 2; i++) {
     let temp = arr[i];
@@ -131,109 +131,150 @@ function reversearray(arr: number[]) {
   console.log(arr);
   return arr;
 }
-let arrq=[1,2,3,4,5];
+let arrq = [1, 2, 3, 4, 5];
 reversearray(arrq);
 
 let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1];
 let maxScore = scores[0];
 let minScore = scores[0];
 
-for(let i=0;i<scores.length;i++)
-  {
-   if(maxScore<scores[i])
-    {
-      maxScore=scores[i];
-    }
-    else if(minScore>scores[i])
-    {
-      minScore=scores[i];
-    }
+for (let i = 0; i < scores.length; i++) {
+  if (maxScore < scores[i]) {
+    maxScore = scores[i];
+  } else if (minScore > scores[i]) {
+    minScore = scores[i];
   }
+}
 
 console.log("Maximum score:", maxScore);
 console.log("Minimum score:", minScore);
 function removeFalseyValues(arr: any[]) {
   return arr.filter((value: string | number | boolean | null | undefined) => {
     // Filter out falsey values: false, null, 0, "", undefined, NaN
-    return value !== false && value !== null && value !== 0 && value !== "" && value !== undefined ;
+    return (
+      value !== false &&
+      value !== null &&
+      value !== 0 &&
+      value !== "" &&
+      value !== undefined
+    );
   });
 }
 
 // Example usage
-let arrayWithFalseyValues = [false, null, 0, "", undefined, NaN, 1, 2, 3, "hello"];
+let arrayWithFalseyValues = [
+  false,
+  null,
+  0,
+  "",
+  undefined,
+  NaN,
+  1,
+  2,
+  3,
+  "hello",
+];
 let arrayWithoutFalseyValues = removeFalseyValues(arrayWithFalseyValues);
 console.log("Array with falsey values:", arrayWithFalseyValues);
 console.log("Array without falsey values:", arrayWithoutFalseyValues);
 ///
-let arr1=[1,2,3];
-let arr2=[5,6,7];
-let d=arr1.concat(arr2);
-console.log("The concatination of the two string is as",d);
+let arr1 = [1, 2, 3];
+let arr2 = [5, 6, 7];
+let d = arr1.concat(arr2);
+console.log("The concatination of the two string is as", d);
 
 //
-function EVENODDSUM()
-{
-let arr4=[1,2,4,5,6];
+function EVENODDSUM() {
+  let arr4 = [1, 2, 4, 5, 6];
 
-let even=0;
-let odd=0;
-for(let i=0;i<arr4.length;i++)
-{
-  if(arr4[i]%2==0)
-    {
-      even=arr4[i]+arr4[i];
+  let even = 0;
+  let odd = 0;
+  for (let i = 0; i < arr4.length; i++) {
+    if (arr4[i] % 2 == 0) {
+      even = arr4[i] + arr4[i];
+    } else {
+      odd = arr4[i] + arr4[i];
     }
-    else
-    {
-      odd=arr4[i]+arr4[i];
-    }
-}
-console.log("The sum of even number are as:",even);
-console.log("The sum of odd number are as:",odd);
+  }
+  console.log("The sum of even number are as:", even);
+  console.log("The sum of odd number are as:", odd);
 }
 EVENODDSUM();
 //Create a function that checks whether an element exists in an array. If it exists, return the index,
 // otherwise return -1
-function ElementExistinArray()
-{
-let arr5=[1,2,3,4,5];
-for(let i=0;i<arr5.length;i++)
-{
-    if(arr5[i]<-1)
-      {
-        console.log("The array is Empty no element exist in an array");
-       
-      }
-
-    else
-    {
+function ElementExistinArray() {
+  let arr5 = [1, 2, 3, 4, 5];
+  for (let i = 0; i < arr5.length; i++) {
+    if (arr5[i] < -1) {
+      console.log("The array is Empty no element exist in an array");
+    } else {
       console.log("There are element in the array");
       return -1;
     }
-}
+  }
 }
 ElementExistinArray();
 
 //
-function Smallestnoinanarray()
-{
- let arr3=[1,2,3,4,5];
- let small=1;
- for(let i=0;i<arr3.length;i++)
-  {
-    if(small>arr3[i])
-      {
-     small =arr3[i];
-      }
-    
+function Smallestnoinanarray() {
+  let arr3 = [1, 2, 3, 4, 5];
+  let small = 1;
+  for (let i = 0; i < arr3.length; i++) {
+    if (small > arr3[i]) {
+      small = arr3[i];
+    }
   }
-  console.log("The smallest Element in an array is as",small);
-
+  console.log("The smallest Element in an array is as", small);
 }
 
 Smallestnoinanarray();
 
+function product()
+{
+  let arr4=[2,1,3];
+  let product=1;
+  for(let i=0;i<arr4.length;i++)
+    {
+      product*=arr4[i];
+    
 
 
+}
+console.log("The product of array is as",product);
+
+}
 
 
+product();
+
+//
+
+//
+function dublicates()
+{
+  let arr4=[1,2,3,3,4,];
+  let count=0;
+  let dublicates1=0;
+  for(let i=0;i<arr4.length;i++)
+    {
+      if(arr4[i]==arr4[i+1])
+        {
+          count++;
+          dublicates1=arr4[i];
+
+        }
+    }
+    console.log("The  Dublicates Element in an array is as:",dublicates);
+}
+
+dublicates();
+
+//
+function increment()
+{
+  let arr5=[1,2,3,4,5];
+  for(let i=0;i<arr5.length;i++)
+    {
+      arr5[i]=arr[i+1];
+    }
+}

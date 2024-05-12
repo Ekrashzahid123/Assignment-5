@@ -139,11 +139,26 @@ console.log("Minimum score:", minScore);
 function removeFalseyValues(arr) {
     return arr.filter((value) => {
         // Filter out falsey values: false, null, 0, "", undefined, NaN
-        return value !== false && value !== null && value !== 0 && value !== "" && value !== undefined;
+        return (value !== false &&
+            value !== null &&
+            value !== 0 &&
+            value !== "" &&
+            value !== undefined);
     });
 }
 // Example usage
-let arrayWithFalseyValues = [false, null, 0, "", undefined, NaN, 1, 2, 3, "hello"];
+let arrayWithFalseyValues = [
+    false,
+    null,
+    0,
+    "",
+    undefined,
+    NaN,
+    1,
+    2,
+    3,
+    "hello",
+];
 let arrayWithoutFalseyValues = removeFalseyValues(arrayWithFalseyValues);
 console.log("Array with falsey values:", arrayWithFalseyValues);
 console.log("Array without falsey values:", arrayWithoutFalseyValues);
@@ -187,7 +202,7 @@ ElementExistinArray();
 //
 function Smallestnoinanarray() {
     let arr3 = [1, 2, 3, 4, 5];
-    let small = 0;
+    let small = 1;
     for (let i = 0; i < arr3.length; i++) {
         if (small > arr3[i]) {
             small = arr3[i];
@@ -196,3 +211,27 @@ function Smallestnoinanarray() {
     console.log("The smallest Element in an array is as", small);
 }
 Smallestnoinanarray();
+function product() {
+    let arr4 = [2, 1, 3];
+    let product = 1;
+    for (let i = 0; i < arr4.length; i++) {
+        product *= arr4[i];
+    }
+    console.log("The product of array is as", product);
+}
+product();
+//
+//
+function dublicates() {
+    let arr4 = [1, 2, 3, 3, 4, 4];
+    let count = 0;
+    let dublicates = 0;
+    for (let i = 0; i < arr4.length; i++) {
+        if (arr4[i] == arr4[i + 1]) {
+            count++;
+            dublicates = arr4[i];
+        }
+    }
+    console.log("The  Dublicates Element in an array is as:", dublicates);
+}
+dublicates();
